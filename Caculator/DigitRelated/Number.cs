@@ -31,6 +31,7 @@ namespace Caculator
         public void Execute()
         {
             GlobalVariables.CurrentValue += Content;
+            GlobalVariables.CurrentValue = double.Parse(GlobalVariables.CurrentValue).ToString();
             GlobalVariables.CurrentEquation = GlobalVariables.CurrentEquation.Substring(0, GlobalVariables.NextNumberStart) + GlobalVariables.CurrentValue;
         }
     }
