@@ -7,30 +7,31 @@ using System.Threading.Tasks;
 namespace Caculator
 {
     /// <summary>
-    /// The dot button class
+    /// The right parenthesis class
     /// </summary>
-    public class DoublePoint : IButton
+    public class RParenthesis : IButton
     {
         /// <summary>
-        /// The content of the button
+        /// The symbol of the button
         /// </summary>
         public static string Content { get; }
 
         /// <summary>
-        /// The constuctor sets the button's symbol
+        /// The constuctor sets the number on the button
         /// </summary>
-        static DoublePoint()
+        static RParenthesis()
         {
-            Content = ".";
+            Content = ")";
         }
 
         /// <summary>
-        /// The method adds a dot to current value and displayed equation
+        /// 
         /// </summary>
         public void Execute()
         {
-            GlobalVariables.CurrentEquation += Content;
-            GlobalVariables.CurrentValue += Content;
+            GlobalVariables.AllTerm.Add(GlobalVariables.CurrentValue);
+            GlobalVariables.UpdateWindow(Content);
+            GlobalVariables.CurrentValue = "";
         }
     }
 }

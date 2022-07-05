@@ -17,10 +17,12 @@ namespace Caculator
         /// <param name="content">The argument is the symbol of the operation</param>
         public static void SymbolWorks(string content)
         {
-            GlobalVariables.ListOperand.Add(double.Parse(GlobalVariables.CurrentValue));
+            if (GlobalVariables.CurrentValue != "")
+            {
+                GlobalVariables.AllTerm.Add(GlobalVariables.CurrentValue);
+            }
+            GlobalVariables.UpdateWindow(content);
             GlobalVariables.CurrentValue = "";
-            GlobalVariables.CurrentEquation += content;
-            GlobalVariables.NextNumberStart = GlobalVariables.CurrentEquation.Length;
         }
     }
 }

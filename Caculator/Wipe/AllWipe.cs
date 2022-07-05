@@ -9,7 +9,7 @@ namespace Caculator
     /// <summary>
     /// The clear button class
     /// </summary>
-    public class Wipe : IButton
+    public class AllWipe : IButton
     {
         /// <summary>
         /// The method clears the screen and background variables

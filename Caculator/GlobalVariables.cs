@@ -14,22 +14,7 @@ namespace Caculator
         /// <summary>
         /// The List of operands
         /// </summary>
-        public static List<double> ListOperand { get; set; }
-
-        /// <summary>
-        /// The list constains single operators
-        /// </summary>
-        public static List<ISingleOperation> SingleOperator { get; set; }
-
-        /// <summary>
-        /// The list contains high order double operators
-        /// </summary>
-        public static List<IDoubleOperation> HighOperator { get; set; }
-
-        /// <summary>
-        /// The list contains low order double operators
-        /// </summary>
-        public static List<IDoubleOperation> LowOperator { get; set; }
+        public static List<string> AllTerm { get; set; }
 
         /// <summary>
         /// The value behinds the last operator
@@ -47,6 +32,16 @@ namespace Caculator
         public static string CurrentEquation { get; set; }
 
         /// <summary>
+        /// The preorder equation
+        /// </summary>
+        public static string PreorderEquation { get; set; }
+
+        /// <summary>
+        /// The postorder equation
+        /// </summary>
+        public static string PostorderEquation { get; set; }
+
+        /// <summary>
         /// The answer of the equation
         /// </summary>
         public static string Result { get; set; }
@@ -56,12 +51,16 @@ namespace Caculator
         /// </summary>
         static GlobalVariables()
         {
-            ListOperand = new List<double>();
-            SingleOperator = new List<ISingleOperation>();
-            HighOperator = new List<IDoubleOperation>();
-            LowOperator = new List<IDoubleOperation>();
+            AllTerm = new List<string>();
             CurrentValue = "";
             CurrentEquation = "";
+        }
+
+        public static void UpdateWindow(string content)
+        {
+            AllTerm.Add(content);
+            CurrentEquation += content;
+            NextNumberStart = CurrentEquation.Length;
         }
 
         /// <summary>
@@ -69,12 +68,9 @@ namespace Caculator
         /// </summary>
         public static void Reset()
         {
-            ListOperand.Clear();
-            SingleOperator.Clear();
-            HighOperator.Clear();
-            LowOperator.Clear();
-            CurrentValue = "";
+            AllTerm.Clear();
             NextNumberStart = 0;
+            CurrentValue = "";
         }
     }
 }

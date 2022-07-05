@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\ISingleOperation.cs" />
-    <Compile Include="Interface\IOperatorContent.cs" />
     <Compile Include="Operation\BaseOperation.cs" />
-    <Compile Include="Interface\IDoubleOperation.cs" />
     <Compile Include="Operation\Sqrt.cs" />
+    <Compile Include="Operation\LParenthesis.cs" />
+    <Compile Include="Operation\RParenthesis.cs" />
+    <Compile Include="Tree\Tree.cs" />
+    <Compile Include="Tree\TreeNode.cs" />
     <Compile Include="Wipe\EquationWipe.cs" />
     <Compile Include="Wipe\Backward.cs" />
     <Compile Include="Calculator.cs">
