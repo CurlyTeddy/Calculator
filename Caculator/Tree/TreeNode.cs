@@ -27,11 +27,6 @@ namespace Caculator
         public TreeNode RightChild { get; set; }
 
         /// <summary>
-        /// The method pointer that specifies what the node should do
-        /// </summary>
-        public Func<double, double, double> Eval { get; set; }
-
-        /// <summary>
         /// The constructor set the value of the node
         /// </summary>
         /// <param name="content">The term in the equation</param>

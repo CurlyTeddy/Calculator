@@ -33,5 +33,10 @@ namespace Caculator
             GlobalVariables.CurrentValue += Content;
             GlobalVariables.CurrentEquation = GlobalVariables.CurrentEquation.Substring(0, GlobalVariables.NextNumberStart) + GlobalVariables.CurrentValue;
         }
+
+        public static void NumberOperation(string nodeSymbol)
+        {
+            double number = double.Parse(nodeSymbol);
+        }
     }
 }

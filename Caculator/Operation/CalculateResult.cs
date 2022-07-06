@@ -34,8 +34,7 @@ namespace Caculator
             Tree.PreorderTraversal(root);
             Tree.PostorderTraversal(root);
             GlobalVariables.CurrentEquation += $"\r\n{GlobalVariables.PreorderEquation}\r\n{GlobalVariables.PostorderEquation}";
-            double total = 0;
-            GlobalVariables.Result = total.ToString();
+            GlobalVariables.Result = Tree.CalculateTree(root).ToString();
 
             GlobalVariables.Reset();
         }

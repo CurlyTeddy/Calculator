@@ -42,14 +42,14 @@ namespace Caculator
                     // Delete "("
                     operators.Pop();
                 }
-                else if (int.TryParse(term, out int dummy))
+                else if (double.TryParse(term, out double dummy))
                 {
                     // Check whether there's sqrt in front of the number
                     subtreeHead.Push(new TreeNode(term));
                     if (operators.Count != 0 && operators.Peek() == Sqrt.Content)
                     {
                         TreeNode root = new TreeNode(operators.Pop());
-                        root.RightChild = subtreeHead.Pop();
+                        root.LeftChild = subtreeHead.Pop();
                         subtreeHead.Push(root);
                     }
                 }
@@ -98,6 +98,34 @@ namespace Caculator
             PostorderTraversal(root.LeftChild);
             PostorderTraversal(root.RightChild);
             GlobalVariables.PostorderEquation += root.Symbol;
+        }
+
+        public static double CalculateTree(TreeNode root)
+        {
+            if(root.LeftChild == null && root.RightChild == null)
+            {
+                return double.Parse(root.Symbol);
+            }
+            else if (root.Symbol == Addition.Content)
+            {
+                return CalculateTree(root.LeftChild) + CalculateTree(root.RightChild);
+            }
+            else if (root.Symbol == Substraction.Content)
+            {
+                return CalculateTree(root.LeftChild) - CalculateTree(root.RightChild);
+            }
+            else if (root.Symbol == Multiplication.Content)
+            {
+                return CalculateTree(root.LeftChild) * CalculateTree(root.RightChild);
+            }
+            else if (root.Symbol == Division.Content)
+            {
+                return CalculateTree(root.LeftChild) / CalculateTree(root.RightChild);
+            }
+            else
+            {
+                return Math.Sqrt(CalculateTree(root.LeftChild));
+            }
         }
     }
 }

@@ -32,14 +32,5 @@ namespace Caculator
         {
             SymbolWorks(Content);
         }
-
-        /// <summary>
-        /// The method calculates partial result of the answer
-        /// </summary>
-        /// <param name="first">The first operand</param>
-        /// <param name="second">The second operand</param>
-        /// <returns>The partial result</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static double Calculate(double first, double second) => first + second;
     }
 }
