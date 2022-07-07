@@ -28,18 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Caculator.DoublePoint doublePoint1 = new Caculator.DoublePoint();
-            Caculator.Backward backward1 = new Caculator.Backward();
-            Caculator.AllWipe wipe1 = new Caculator.AllWipe();
-            Caculator.Division division1 = new Caculator.Division();
-            Caculator.Multiplication multiplication1 = new Caculator.Multiplication();
-            Caculator.Substraction substraction1 = new Caculator.Substraction();
-            Caculator.CalculateResult calculateResult1 = new Caculator.CalculateResult();
-            Caculator.EquationWipe equationWipe1 = new Caculator.EquationWipe();
-            Caculator.Addition addition1 = new Caculator.Addition();
-            Caculator.Sqrt sqrt1 = new Caculator.Sqrt();
-            Caculator.Sqrt sqrt2 = new Caculator.Sqrt();
-            Caculator.Sqrt sqrt3 = new Caculator.Sqrt();
             this.Dot = new System.Windows.Forms.Button();
             this.BackArrow = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
@@ -73,7 +61,6 @@
             this.Dot.Name = "Dot";
             this.Dot.Size = new System.Drawing.Size(50, 60);
             this.Dot.TabIndex = 4;
-            this.Dot.Tag = doublePoint1;
             this.Dot.Text = ".";
             this.Dot.UseVisualStyleBackColor = true;
             this.Dot.Click += new System.EventHandler(this.ButtonClick);
@@ -85,7 +72,6 @@
             this.BackArrow.Name = "BackArrow";
             this.BackArrow.Size = new System.Drawing.Size(50, 60);
             this.BackArrow.TabIndex = 11;
-            this.BackArrow.Tag = backward1;
             this.BackArrow.Text = "←";
             this.BackArrow.UseVisualStyleBackColor = true;
             this.BackArrow.Click += new System.EventHandler(this.ButtonClick);
@@ -97,7 +83,6 @@
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(50, 60);
             this.Clear.TabIndex = 12;
-            this.Clear.Tag = wipe1;
             this.Clear.Text = "C";
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.ButtonClick);
@@ -109,7 +94,6 @@
             this.Divide.Name = "Divide";
             this.Divide.Size = new System.Drawing.Size(50, 60);
             this.Divide.TabIndex = 13;
-            this.Divide.Tag = division1;
             this.Divide.Text = "÷";
             this.Divide.UseVisualStyleBackColor = true;
             this.Divide.Click += new System.EventHandler(this.ButtonClick);
@@ -122,7 +106,6 @@
             this.Multiply.Name = "Multiply";
             this.Multiply.Size = new System.Drawing.Size(50, 60);
             this.Multiply.TabIndex = 14;
-            this.Multiply.Tag = multiplication1;
             this.Multiply.Text = "×";
             this.Multiply.UseVisualStyleBackColor = true;
             this.Multiply.Click += new System.EventHandler(this.ButtonClick);
@@ -134,7 +117,6 @@
             this.Minus.Name = "Minus";
             this.Minus.Size = new System.Drawing.Size(50, 60);
             this.Minus.TabIndex = 16;
-            this.Minus.Tag = substraction1;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = true;
             this.Minus.Click += new System.EventHandler(this.ButtonClick);
@@ -146,7 +128,6 @@
             this.Equal.Name = "Equal";
             this.Equal.Size = new System.Drawing.Size(50, 60);
             this.Equal.TabIndex = 17;
-            this.Equal.Tag = calculateResult1;
             this.Equal.Text = "=";
             this.Equal.UseVisualStyleBackColor = true;
             this.Equal.Click += new System.EventHandler(this.ButtonClick);
@@ -182,7 +163,6 @@
             this.ClearEntry.Name = "ClearEntry";
             this.ClearEntry.Size = new System.Drawing.Size(50, 60);
             this.ClearEntry.TabIndex = 20;
-            this.ClearEntry.Tag = equationWipe1;
             this.ClearEntry.Text = "CE";
             this.ClearEntry.UseVisualStyleBackColor = true;
             this.ClearEntry.Click += new System.EventHandler(this.ButtonClick);
@@ -194,7 +174,6 @@
             this.Plus.Name = "Plus";
             this.Plus.Size = new System.Drawing.Size(50, 60);
             this.Plus.TabIndex = 15;
-            this.Plus.Tag = addition1;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = true;
             this.Plus.Click += new System.EventHandler(this.ButtonClick);
@@ -316,7 +295,6 @@
             this.SqrtButton.Name = "SqrtButton";
             this.SqrtButton.Size = new System.Drawing.Size(50, 60);
             this.SqrtButton.TabIndex = 21;
-            this.SqrtButton.Tag = sqrt1;
             this.SqrtButton.Text = "√";
             this.SqrtButton.UseVisualStyleBackColor = true;
             this.SqrtButton.Click += new System.EventHandler(this.ButtonClick);
@@ -328,7 +306,6 @@
             this.LeftParenthesis.Name = "LeftParenthesis";
             this.LeftParenthesis.Size = new System.Drawing.Size(50, 60);
             this.LeftParenthesis.TabIndex = 22;
-            this.LeftParenthesis.Tag = sqrt2;
             this.LeftParenthesis.Text = "(";
             this.LeftParenthesis.UseVisualStyleBackColor = true;
             this.LeftParenthesis.Click += new System.EventHandler(this.ButtonClick);
@@ -340,7 +317,6 @@
             this.RightParenthesis.Name = "RightParenthesis";
             this.RightParenthesis.Size = new System.Drawing.Size(50, 60);
             this.RightParenthesis.TabIndex = 23;
-            this.RightParenthesis.Tag = sqrt3;
             this.RightParenthesis.Text = ")";
             this.RightParenthesis.UseVisualStyleBackColor = true;
             this.RightParenthesis.Click += new System.EventHandler(this.ButtonClick);
