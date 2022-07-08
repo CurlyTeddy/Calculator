@@ -32,13 +32,5 @@ namespace Caculator
         {
             GlobalVariables.UpdateWindow(Content);
         }
-
-        /// <summary>
-        /// The method calculates the sqrt of a number
-        /// </summary>
-        /// <param name="operand">The operand that is to be sqrted</param>
-        /// <returns></returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static double Calculate(double operand) => Math.Sqrt(operand);
     }
 }
