@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Caculator
+﻿namespace Caculator
 {
     /// <summary>
     /// The class of clear entry button
@@ -17,6 +11,8 @@ namespace Caculator
         public void Execute()
         {
             GlobalVariables.CurrentEquation = "";
+            GlobalVariables.PreorderEquation = "";
+            GlobalVariables.PostorderEquation = "";
             GlobalVariables.Reset();
         }
     }
